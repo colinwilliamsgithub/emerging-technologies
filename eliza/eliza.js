@@ -60,3 +60,15 @@ const reflections = {
     "yours": "mine",
     "are": "am",
 }
+
+// Function to reflect responses.
+// Adapted from notes:
+/*
+def reflect(text):
+    words = text.lower().split()
+    reflected_words = [reflections.get(word, word) for word in words]
+    return " ".join(reflected_words)
+*/
+function reflect(text) {
+    return text.toLowerCase().split(" ").map(word => reflections[word] || word).join(" ");
+}
