@@ -1,4 +1,4 @@
-// A dictionary of responses based on various patterns from notes.
+// A dictionary of responses based on various patterns (from notes).
 const responses = {
     'hello|hi|hey': [
         "Hello! How are you feeling today?",
@@ -47,4 +47,16 @@ const responses = {
         "What do you mean by that?",
         "Interesting... go on."
     ],
+}
+
+// A dictionary of reflections to swap words, e.g. "i" -> "you" (from notes).
+const reflections = {
+    "i": "you",
+    "me": "you",
+    "my": "your",
+    "am": "are",
+    "you": "i",
+    "your": "my",
+    "yours": "mine",
+    "are": "am",
 }
