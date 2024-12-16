@@ -72,3 +72,20 @@ def reflect(text):
 function reflect(text) {
     return text.toLowerCase().split(" ").map(word => reflections[word] || word).join(" ");
 }
+
+// Function to select a response based on the users input (adapted from notes)
+function respond(user_input) {
+    for (const [pattern, responses_list] of Object.entries(responses)) {
+        const regex = new RegExp(pattern, 'i');
+        const match = user_input.match(regex);
+
+        // If match is found, return a random response from the list
+        if (match) {
+            const response = responses_list[Math.floor(Math.random() * responses_list.length)];
+            const reflected_groups = match.slice(1).map(group => reflect(group || ""));
+            return response.replace(/{(\d+)}/g, (_, index) => reflected_groups[index] || "");
+        }
+    }
+    // Default response
+    return "I'm not sure I understand. Can you elaborate?";
+}
