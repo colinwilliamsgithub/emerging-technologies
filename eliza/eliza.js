@@ -89,3 +89,41 @@ function respond(user_input) {
     // Default response
     return "I'm not sure I understand. Can you elaborate?";
 }
+
+// Code for interacting with the HTML interface
+document.addEventListener('DOMContentLoaded', () => {
+    const chatBox = document.getElementById('chat-box');
+    const userInput = document.getElementById('user-input');
+    const sendButton = document.getElementById('send-button');
+
+    // Function to add messages
+    function addMessage(sender, message) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add(sender);
+        messageDiv.textContent = message;
+        chatBox.appendChild(messageDiv);
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // Handle user input
+    function handleUserInput() {
+        const userMessage = userInput.value.trim();
+        if (userMessage) {
+            addMessage('user', "You: " + userMessage);
+            const botResponse = respond(userMessage);
+            addMessage('eliza', "Eliza: " + botResponse);
+            userInput.value = '';
+        }
+    }
+
+    // Event listeners
+    sendButton.addEventListener('click', handleUserInput);
+    userInput.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            handleUserInput();
+        }
+    });
+
+    // Initial message
+    addMessage('eliza', "Eliza: Hello! How are you feeling today?");
+});
