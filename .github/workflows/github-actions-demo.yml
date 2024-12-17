@@ -12,9 +12,12 @@ permissions:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+  environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+  runs-on: ubuntu-latest
 
-    steps:
+  steps:
     - name: Checkout repository
       uses: actions/checkout@v4
 
