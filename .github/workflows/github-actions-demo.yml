@@ -28,4 +28,4 @@ jobs:
       uses: actions/deploy-pages@v2
 
     - name: Deployment Status
-      run: echo "Deployment completed to: https://<colinwilliamsgithub>.github.io/<emerging-technologies>/"
+      run: echo "Deployment completed to: https://colinwilliamsgithub.github.io/emerging-technologies/"
