@@ -65,10 +65,8 @@ const responses = {
     ],
     '(.*) sad|upset|angry|frustrated(.*)': [
         "I’m sorry to hear that. What’s contributing to this feeling?",
-        "How do you usually deal with being {1}?",
         "Is there anything you can do to ease this feeling?",
-        "What do you think triggered this feeling?",
-        "Do you want to share more about why you feel {1}?"
+        "What do you think triggered this feeling?"
     ],
     '(.*) (sorry|apologize)(.*)': [
         "No need to apologize.",
