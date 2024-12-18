@@ -3,51 +3,147 @@ const responses = {
     'hello|hi|hey': [
         "Hello! How are you feeling today?",
         "Hi there! What’s on your mind?",
-        "Hey! How can I help you?"
+        "Hey! How can I help you?",
+        "Hi! What’s going on with you today?",
+        "Hey there! How can I support you?"
     ],
     'you remind me of (.*)': [
         "Why do you think I remind you of {0}?",
         "What makes you think of {0} when talking to me?",
-        "Is it a good feeling to be reminded of {0}?"
+        "Is it a good feeling to be reminded of {0}?",
+        "How do you feel about being reminded of {0}?",
+        "Do you often think about {0}?"
     ],
     '(.*) mother|father|family|parent(.*)': [
         "Tell me more about your family.",
         "How does that make you feel about your family?",
-        "What role does your family play in your thoughts?"
+        "What role does your family play in your thoughts?",
+        "What’s the relationship with your family like?",
+        "Does your family often come to mind?"
+    ],
+    '(.*) friend|partner|relationship(.*)': [
+        "What’s important to you in a relationship?",
+        "How do your friends support you?",
+        "Can you share more about your partner?",
+        "How do your relationships shape your thoughts?",
+        "What makes your friendships special to you?"
     ],
     '(.*) I need (.*)': [
         "Why do you need {1}?",
         "Would getting {1} really help you?",
-        "What if you didn’t need {1}?"
+        "What if you didn’t need {1}?",
+        "How would your life change with {1}?",
+        "Do you think others also need {1}?"
+    ],
+    '(.*) I want (.*)': [
+        "Why do you want {1}?",
+        "Would getting {1} bring you happiness?",
+        "What’s stopping you from having {1}?",
+        "Do you often think about wanting {1}?",
+        "What’s the first step you could take toward getting {1}?"
     ],
     '(.*) I am (.*)': [
         "Why do you think you are {1}?",
         "How long have you felt that way?",
-        "What made you feel like {1}?"
+        "What made you feel like {1}?",
+        "Does being {1} define you?",
+        "How does being {1} affect your life?"
     ],
     '(.*) I feel (.*)': [
         "Why do you feel {1}?",
         "Does feeling {1} happen often?",
-        "How does that feeling affect you?"
+        "How does that feeling affect you?",
+        "Can you describe what feeling {1} is like?",
+        "What do you think causes you to feel {1}?"
+    ],
+    '(.*) happy|joyful|excited(.*)': [
+        "What’s bringing you happiness right now?",
+        "That’s wonderful! How can you hold onto this feeling?",
+        "What’s the most joyful part of this experience?",
+        "Tell me more about what’s making you excited.",
+        "How often do you feel this kind of happiness?"
+    ],
+    '(.*) sad|upset|angry|frustrated(.*)': [
+        "I’m sorry to hear that. What’s contributing to this feeling?",
+        "How do you usually deal with being {1}?",
+        "Is there anything you can do to ease this feeling?",
+        "What do you think triggered this feeling?",
+        "Do you want to share more about why you feel {1}?"
     ],
     '(.*) (sorry|apologize)(.*)': [
         "No need to apologize.",
         "Apologies aren't necessary. Why do you feel that way?",
-        "It’s okay to feel that way."
+        "It’s okay to feel that way.",
+        "There’s no need to be sorry. Tell me more.",
+        "Why do you feel the need to apologize?"
     ],
     'bye|goodbye|exit': [
         "Goodbye! Take care.",
         "Thank you for sharing. Goodbye!",
-        "Bye! I’m here if you need to talk again."
+        "Bye! I’m here if you need to talk again.",
+        "Farewell! Hope to hear from you again.",
+        "Goodbye! Remember, I’m always here for you."
+    ],
+    'why do you (.*)': [
+        "Why do you think I {0}?",
+        "What makes you ask that I {0}?",
+        "Does it bother you that I {0}?",
+        "Why do you want to know why I {0}?",
+        "Have you thought about why you asked about {0}?"
+    ],
+    'do you (.*)': [
+        "Why do you ask if I {0}?",
+        "Does it matter to you if I {0}?",
+        "What makes you curious about that?",
+        "Do you think I should {0}?",
+        "Why does this question interest you?"
+    ],
+    'are you (.*)': [
+        "Do you think I am {0}?",
+        "What does it mean to you if I were {0}?",
+        "Why do you want to know if I am {0}?",
+        "How would it affect you if I were {0}?",
+        "What does being {0} mean to you?"
+    ],
+    'because (.*)': [
+        "Is that the only reason?",
+        "Why do you think that because {0}?",
+        "How does {0} explain it?",
+        "Does that fully explain it?",
+        "What else could be the reason?"
+    ],
+    'I think (.*)': [
+        "Why do you think {0}?",
+        "What makes you believe that {0}?",
+        "Have you always thought that {0}?",
+        "Do others also think that {0}?",
+        "What if {0} wasn’t true?"
+    ],
+    'why (.*)': [
+        "Why do you think that’s the case?",
+        "What makes you ask that question?",
+        "What do you think is the reason?",
+        "Why is that important to you?",
+        "Can you explore why this is on your mind?"
+    ],
+    'what if (.*)': [
+        "What makes you wonder about {1}?",
+        "How would you feel if {1} happened?",
+        "What’s the likelihood of {1}?",
+        "What would change if {1} came true?",
+        "Does thinking about {1} excite you or worry you?"
     ],
     '(.*)': [
         "Can you tell me more?",
         "Why do you say that?",
         "How does that make you feel?",
         "What do you mean by that?",
-        "Interesting... go on."
-    ],
-}
+        "Interesting... go on.",
+        "Can you elaborate on that?",
+        "Why is that important to you?",
+        "What else comes to mind when you think about that?"
+    ]
+};
 
 // A dictionary of reflections to swap words, e.g. "i" -> "you" (from notes).
 const reflections = {
