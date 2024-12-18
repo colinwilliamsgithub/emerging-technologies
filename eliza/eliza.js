@@ -1,4 +1,4 @@
-// A dictionary of responses based on various patterns (from notes).
+// A dictionary of responses based on various patterns (expanded from notes).
 const responses = {
     'hello|hi|hey': [
         "Hello! How are you feeling today?",
@@ -145,16 +145,27 @@ const responses = {
     ]
 };
 
-// A dictionary of reflections to swap words, e.g. "i" -> "you" (from notes).
+// A dictionary of reflections to swap words, e.g. "i" -> "you" (expanded from notes).
 const reflections = {
     "i": "you",
     "me": "you",
     "my": "your",
+    "mine": "yours",
     "am": "are",
     "you": "i",
     "your": "my",
     "yours": "mine",
     "are": "am",
+    "we": "you",
+    "us": "you",
+    "ours": "yours",
+    "our": "your",
+    "myself": "yourself",
+    "yourself": "myself",
+    "i'm": "you're",
+    "you're": "I'm",
+    "was": "were",
+    "were": "was",
 }
 
 // Function to reflect responses.
