@@ -24,6 +24,33 @@ This notebook contains four tasks:
 - ### Task 4: Export your model as JSON
   For the final task, I have to export the model as a JSON file, which is saved in my repository as trigrams.json.
 
+To run the trigrams.ipynb notebook on a local PC, follow these steps:
+
+- Install Jupyter Notebook:
+  Ensure you have Python installed, then install Jupyter Notebook using pip:
+
+  ```
+  pip install notebook
+  ```
+  
+- Clone the Repository:
+  Clone the repository containing the notebook to your local machine:
+
+  ```
+  git clone https://github.com/colinwilliamsgithub/emerging-technologies.git
+  cd emerging-technologies
+  ```
+
+- Start Jupyter Notebook:
+  Launch Jupyter Notebook to open the notebook.
+
+  ```
+  jupyter notebook
+  ```
+  
+- Open the Notebook:
+  In the Jupyter interface, navigate to the trigrams.ipynb file and open it.
+
 # Part 2: Eliza Chatbot
 
 For this part, I have to create my own version of the ELIZA chatbot. All of the eliza files are stored in a folder titled "eliza" in this repository.
