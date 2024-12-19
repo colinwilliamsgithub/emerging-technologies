@@ -31,3 +31,11 @@ For this part, I have to create my own version of the ELIZA chatbot. All of the 
 The chatbot interface includes a text box for user input and an area to display the conversation history. The user can talk to the chatbot, and if the message is in the chatbots list of responses, the chatbot will respond to what the user said. The chatbot will also reflect certain words, e.g. "i" -> "you". This makes the responses flow smoother.
 
 The eliza chatbot is hosted on Github Pages: https://colinwilliamsgithub.github.io/emerging-technologies/
+
+# References
+
+Here is a list of resources that helped in completing these tasks:
+- https://github.com/ianmcloughlin/2425_emerging_technologies/blob/main/02_language_models.ipynb
+- https://www.geeksforgeeks.org/reading-and-writing-json-to-a-file-in-python/
+- https://github.com/ianmcloughlin/2425_emerging_technologies/blob/main/03_eliza.ipynb
+- https://github.com/actions/deploy-pages
